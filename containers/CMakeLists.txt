@@ -65,7 +65,7 @@ set(packetizers_SRCS ${packetizers_SRCS} ${SOURCE_DIR}/pcm/pcm_packetizer.c)
 set(packetizers_SRCS ${packetizers_SRCS} ${SOURCE_DIR}/h264/avc1_packetizer.c)
 
 add_library(containers ${LIBRARY_TYPE} ${core_SRCS} ${io_SRCS} ${net_SRCS} ${packetizers_SRCS})
-target_link_libraries(containers vcos)
+target_link_libraries(containers vcos log)
 install(TARGETS containers DESTINATION lib)
 
 set(container_readers)
