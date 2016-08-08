@@ -4,6 +4,7 @@
 #
 
 SET(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSROOT /home/adi/tools/android-sdk/ndk-bundle/platforms/android-21/arch-arm/)
 SET(CMAKE_C_COMPILER /home/adi/tools/android-sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc)
 SET(CMAKE_CXX_COMPILER /home/adi/tools/android-sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-g++)
 SET(CMAKE_ASM_COMPILER /home/adi/tools/android-sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc)
