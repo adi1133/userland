@@ -38,7 +38,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifdef __ANDROID__
 #define LOG_TAG "ContainersCore"
-#include <cutils/log.h>
+#include <android/log.h>
 #endif
 
 /* Default verbosity that will be inherited by containers */
@@ -98,7 +98,7 @@ void vc_container_log_vargs(VC_CONTAINER_T *ctx, VC_CONTAINER_LOG_TYPE_T type, c
          logLevel = ANDROID_LOG_DEBUG;
 
       // Actually put the message out.
-      LOG_PRI_VA(logLevel, LOG_TAG, format, args);
+      __android_log_vprint(logLevel, LOG_TAG, format, args);
    }
 #else
 #ifndef ENABLE_CONTAINERS_STANDALONE
