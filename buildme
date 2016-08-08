@@ -34,7 +34,7 @@ else
 	# Cross compile on a more capable machine
 	mkdir -p build/arm-linux/$BUILDSUBDIR
 	pushd build/arm-linux/$BUILDSUBDIR
-	cmake -DCMAKE_TOOLCHAIN_FILE=../../../makefiles/cmake/toolchains/arm-linux-gnueabihf.cmake -DCMAKE_BUILD_TYPE=$BUILDTYPE ../../..
+	cmake -DCMAKE_TOOLCHAIN_FILE=../../../makefiles/cmake/toolchains/arm-linux-androideabi.cmake -DCMAKE_BUILD_TYPE=$BUILDTYPE ../../.. -DCMAKE_SYSROOT=/home/adi/tools/android-sdk/ndk-bundle/platforms/android-21/arch-arm/
 	make -j 6
 
 	if [ "$1" != "" ]; then
