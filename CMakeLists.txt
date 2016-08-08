@@ -71,7 +71,8 @@ endif()
 
 # VidTex supports Android and Linux
 if(BUILD_MMAL_APPS)
-add_subdirectory(host_applications/android/apps/vidtex)
+#skip vidtex because it requires android platform code to build
+#add_subdirectory(host_applications/android/apps/vidtex)
 endif(BUILD_MMAL_APPS)
 
 add_subdirectory(middleware/openmaxil)
